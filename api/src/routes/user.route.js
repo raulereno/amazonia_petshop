@@ -5,9 +5,9 @@ const {
   updateUser,
   deleteUser,
 } = require("../controllers/user.controller");
-const userRoute = Router();
+const route = Router();
 
-userRoute.get("/", async (req, res) => {
+route.get("/", async (req, res) => {
   try {
     const result = await getAllUsers();
     res.send({ status: "success", payload: result });
@@ -16,7 +16,7 @@ userRoute.get("/", async (req, res) => {
   }
 });
 
-userRoute.post("/", async (req, res) => {
+route.post("/", async (req, res) => {
   try {
     const result = await createUser(req.body);
     res.send({ status: "success", payload: result });
@@ -25,7 +25,7 @@ userRoute.post("/", async (req, res) => {
   }
 });
 
-userRoute.put("/updateUser/:id", async (req, res) => {
+route.put("/updateUser/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -36,7 +36,7 @@ userRoute.put("/updateUser/:id", async (req, res) => {
   }
 });
 
-userRoute.delete("/:id", async (req, res) => {
+route.delete("/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -47,4 +47,4 @@ userRoute.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = userRoute;
+module.exports = route;
