@@ -1,48 +1,45 @@
 const { Router } = require("express");
 const {
-  getAllUsers,
-  createUser,
-  updateUser,
-  deleteUser,
-} = require("../controllers/user.controller");
+  getAllProducts,
+  createProduct,
+  deleteProduct,
+  updateProduct,
+} = require("../controllers/products.controller");
 const route = Router();
-
-//TODO: Agregar middleware para requerir auntenticacion de admin para estas rutas
 
 route.get("/", async (req, res) => {
   try {
-    const result = await getAllUsers();
+    const result = await getAllProducts();
     res.send({ status: "success", payload: result });
   } catch (error) {
     res.send({ status: "error", error: error.message });
   }
 });
-
+//TODO: Agregar middleware para requerir auntenticacion de admin
 route.post("/", async (req, res) => {
   try {
-    const result = await createUser(req.body);
+    const result = await createProduct(req.body);
     res.send({ status: "success", payload: result });
   } catch (error) {
     res.send({ status: "error", error: error.message });
   }
 });
 
-route.put("/updateUser/:id", async (req, res) => {
+route.put("/update/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
-    const result = await updateUser(id, req.body);
+    const result = await updateProduct(id, req.body);
     res.send({ status: "success", payload: result });
   } catch (error) {
     res.send({ status: "error", error: error.message });
   }
 });
 
-route.delete("/:id", async (req, res) => {
+route.delete("/delete/:id", async (req, res) => {
   const { id } = req.params;
-
   try {
-    const result = await deleteUser(id);
+    const result = await deleteProduct(id);
     res.send({ status: "success", payload: result });
   } catch (error) {
     res.send({ status: "error", error: error.message });
