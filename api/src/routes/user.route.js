@@ -7,6 +7,8 @@ const {
 } = require("../controllers/user.controller");
 const route = Router();
 
+//TODO: Agregar middleware para requerir auntenticacion de admin para estas rutas
+
 route.get("/", async (req, res) => {
   try {
     const result = await getAllUsers();

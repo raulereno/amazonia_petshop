@@ -15,7 +15,7 @@ route.get("/", async (req, res) => {
     res.send({ status: "error", error: error.message });
   }
 });
-
+//TODO: Agregar middleware para requerir auntenticacion de admin
 route.post("/", async (req, res) => {
   try {
     const result = await createProduct(req.body);
