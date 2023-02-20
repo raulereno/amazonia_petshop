@@ -13,7 +13,7 @@ const createProduct = async (product) => {
   if ((!title, !price, !code, !stock)) throw Error("Fields mising");
 
   const result = await productModel.create(product);
-  console.log(result);
+
   return result;
 };
 const updateProduct = async (id, productUpdate) => {
