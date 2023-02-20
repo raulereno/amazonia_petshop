@@ -1,0 +1,19 @@
+#container_navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100px;
+
+  &.scroll_navbar {
+    position: fixed;
+    top: 0;
+    #topbar {
+      display: none;
+    }
+    nav {
+      margin-top: 0;
+      background-color: white;
+    }
+  }
+}
