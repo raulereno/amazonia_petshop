@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 99;
   height: auto;
 
   &.scroll_navbar {
@@ -18,7 +18,31 @@
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
       ul {
         li {
-          color: black;
+          a {
+            color: black;
+            &:hover {
+              color: #9f65d1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.other_pages {
+    #topbar {
+      background-color: #9f65d1;
+    }
+    nav {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+      ul {
+        li {
+          a {
+            color: black;
+            &:hover {
+              color: #9f65d1;
+            }
+          }
         }
       }
     }

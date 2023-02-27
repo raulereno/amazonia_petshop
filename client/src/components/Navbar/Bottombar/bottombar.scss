@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 13px 120px 0 120px;
+  padding: 0 120px 0 120px;
   img {
     width: 80px;
     height: 65px;
@@ -21,19 +21,22 @@
     li {
       font-size: 17px;
       opacity: 0.8;
-      color: white;
       font-weight: 600;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          opacity: 1;
+          color: white;
+          font-weight: 900;
+          color: #9f65d1;
+          cursor: pointer;
+          font-weight: bolder;
+        }
+      }
       &.active {
         color: #ffffff;
         border-bottom: 3px solid #7f3999;
-      }
-      &:hover {
-        opacity: 1;
-        color: white;
-        font-weight: 900;
-        color: #9f65d1;
-        cursor: pointer;
-        font-weight: bolder;
       }
     }
   }

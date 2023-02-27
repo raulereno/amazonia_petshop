@@ -1,0 +1,23 @@
+#container_about {
+  .header_pages {
+    .header_contain {
+      left: 33%;
+    }
+  }
+  #about_main {
+    .about_culture {
+      display: flex;
+      padding: 50px 120px;
+      align-items: center;
+    }
+    .our_team {
+      padding: 50px 120px;
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
