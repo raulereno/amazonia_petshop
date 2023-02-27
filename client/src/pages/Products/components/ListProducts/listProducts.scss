@@ -1,0 +1,10 @@
+#list_products {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  align-content: center;
+  gap: 15px;
+  margin-left: 50px;
+}

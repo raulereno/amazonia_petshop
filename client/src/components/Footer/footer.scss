@@ -1,0 +1,41 @@
+#container_footer {
+  background-color: rgba(128, 128, 128, 0.261);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 120px 50px 120px;
+  #connect {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding-left: 0;
+      margin-top: 15px;
+      li {
+        opacity: 0.5;
+        a {
+          background-color: #7f3999;
+          padding: 10px;
+          border-radius: 50%;
+          display: flex;
+
+          svg {
+            width: 25px;
+            height: 25px;
+            fill: white;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    ul {
+      margin-top: 15px;
+    }
+  }
+}

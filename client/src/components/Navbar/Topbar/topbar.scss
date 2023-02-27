@@ -1,0 +1,45 @@
+#topbar {
+  padding: 10px 120px 10px 125px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.317);
+  display: flex;
+  justify-content: space-between;
+  max-height: 50px;
+  #topbar_contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    div {
+      display: flex;
+      align-items: center;
+
+      gap: 3px;
+      #icon_phone {
+        width: 15px;
+        fill: white;
+        transform: rotate(270deg);
+      }
+      svg {
+        width: 15px;
+        fill: white;
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+  #topbar_social-medias {
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 15px;
+      li {
+        svg {
+          fill: white;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
